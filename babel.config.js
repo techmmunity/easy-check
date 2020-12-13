@@ -15,7 +15,9 @@ module.exports = {
     [
       "module-resolver",
       {
-        alias: {},
+        alias: {
+          checks: "./src/checks",
+        },
       },
     ],
   ],

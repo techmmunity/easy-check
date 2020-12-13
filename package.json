@@ -1,15 +1,30 @@
 {
-  "name": "tsnode-template",
+  "name": "@razal/easy-check",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/razal-easy-check.d.ts",
+  "author": "Henrique Leite",
+  "description": "A Simple Library To Check Things With Regex",
+  "homepage": "https://github.com/henriqueleite42/@razal/easy-check#readme",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/henriqueleite42/@razal/easy-check/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henriqueleite42/@razal/easy-check.git"
+  },
+  "keywords": [
+    "check",
+    "regex",
+    "validation"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
-    "@types/express": "^4.17.7",
     "@types/jest": "^26.0.5",
     "@typescript-eslint/eslint-plugin": "^3.7.0",
     "@typescript-eslint/parser": "^3.7.0",
@@ -28,13 +43,11 @@
     "ts-jest": "^26.1.3",
     "typescript": "^3.9.7"
   },
+  "dependencies": {},
   "scripts": {
     "clean": "rm -rf dist",
     "build": "babel src --extensions \".ts\" --out-dir dist --copy-files --no-copy-ignored",
     "test": "jest",
     "start": "yarn build && node dist/server.js"
-  },
-  "dependencies": {
-    "express": "^4.17.1"
   }
 }
