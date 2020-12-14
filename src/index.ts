@@ -1,6 +1,6 @@
 import { isEmail } from "checks/email";
-import { isOnlyOneEmoji, hasEmojis } from "checks/emoji";
-import { isHex } from "checks/hex";
+import { isEmoji, hasEmojis } from "checks/emoji";
+import { isHexColor } from "checks/hex";
 import { hasHtmlTags } from "checks/html";
 import { isIpv4 } from "checks/ip";
 import { isStrongPassword } from "checks/password";
@@ -9,9 +9,9 @@ import { isSimpleUsername } from "checks/username";
 
 export default {
   isEmail,
-  isOnlyOneEmoji,
+  isEmoji,
   hasEmojis,
-  isHex,
+  isHexColor,
   hasHtmlTags,
   isIpv4,
   isStrongPassword,

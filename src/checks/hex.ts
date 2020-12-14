@@ -1,2 +1,2 @@
-const IS_HEX = /^\B#(?:[a-fA-F0–9]{6}|[a-fA-F0–9]{3})\b$/g;
-export const isHex = (str: string) => IS_HEX.test(str);
+const IS_HEX_COLOR = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
+export const isHexColor = (str: string) => IS_HEX_COLOR.test(str);
