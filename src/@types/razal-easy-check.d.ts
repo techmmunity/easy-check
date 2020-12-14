@@ -34,10 +34,6 @@ declare module "@razal/easy-check" {
      */
     isStrongPassword(str: string): boolean;
     /**
-     * Check if a string is a SSN
-     */
-    isSSN(str: string): boolean;
-    /**
      * Check if a string is a simple username
      * - 3 to 6 characters
      * - Lower Ans Uper case allowed
