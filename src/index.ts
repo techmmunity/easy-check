@@ -8,6 +8,7 @@ import { isBrazillianPhone } from "checks/phone";
 import { isRegex } from "checks/regex";
 import { isSimpleUsername } from "checks/username";
 
+//
 export default {
   isEmail,
   isEmoji,
