@@ -1,8 +1,8 @@
 {
-  "name": "easy-check",
+  "name": "@techmmunity/easy-check",
   "version": "1.0.0",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "author": "Techmmunity",
   "description": "A Simple Library To Check Things With Regex",
   "homepage": "https://github.com/Techmmunity/easy-check#readme",
