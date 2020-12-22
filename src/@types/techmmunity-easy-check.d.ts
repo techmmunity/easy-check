@@ -1,5 +1,5 @@
-declare module "@razal/easy-check" {
-  declare const RazalEasyCheck: {
+declare module "@techmmunity/easy-check" {
+  declare const TechmmunityEasyCheck: {
     /**
      * Check if a string is an email
      */
@@ -42,5 +42,5 @@ declare module "@razal/easy-check" {
     isSimpleUsername(str: string): boolean;
   };
 
-  export default RazalEasyCheck;
+  export default TechmmunityEasyCheck;
 }

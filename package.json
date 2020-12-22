@@ -1,18 +1,18 @@
 {
-  "name": "@razal/easy-check",
+  "name": "@techmmunity/easy-check",
   "version": "1.0.0",
   "main": "lib/index.js",
-  "types": "lib/razal-easy-check.d.ts",
-  "author": "Henrique Leite",
+  "types": "lib/techmmunity-easy-check.d.ts",
+  "author": "Techmmunity Team",
   "description": "A Simple Library To Check Things With Regex",
-  "homepage": "https://github.com/henriqueleite42/@razal/easy-check#readme",
+  "homepage": "https://github.com/Techmmunity/techmmunity-easy-check#readme",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/henriqueleite42/@razal/easy-check/issues"
+    "url": "https://github.com/Techmmunity/techmmunity-easy-check/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/henriqueleite42/@razal/easy-check.git"
+    "url": "git+https://github.com/Techmmunity/techmmunity-easy-check.git"
   },
   "keywords": [
     "check",
