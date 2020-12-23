@@ -1,4 +1,14 @@
+# Node Modules
 node_modules/
+
+# Coverage
+coverage/
+
+# Build
 dist/
+
+# Lint
 lib/
+
+# Files
 *.js
