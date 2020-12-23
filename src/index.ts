@@ -6,10 +6,9 @@ import { hasHtmlTags } from "checks/html";
 import { isIpv4, isIpv4WithMask } from "checks/ip";
 import { isStrongPassword } from "checks/password";
 import { isBrazillianPhone } from "checks/phone";
-import { isRegex } from "checks/regex";
 import { isSimpleUsername } from "checks/username";
 
-export const EasyCheck = {
+export const check = {
   /**
    * Check if a string is an email
    */
@@ -59,12 +58,6 @@ export const EasyCheck = {
    * - 2199999999
    */
   isBrazillianPhone,
-  /**
-   * Check if a string is a valid regex
-   * - /^[0-9]{,3}$/
-   * - /^[0-9]{,3}$/gi
-   */
-  isRegex,
   /**
    * Check if a string is a simple username
    * - 3 to 6 characters
