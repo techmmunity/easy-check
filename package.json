@@ -1,6 +1,6 @@
 {
   "name": "@techmmunity/easy-check",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "types": "index.d.ts",
   "author": "Techmmunity",
@@ -48,6 +48,8 @@
     "remove:checks": "rm -rf dist/checks",
     "uglify": "uglifyjs dist/index.js -c -o dist/index-u.js",
     "replace:uglifyed": "mv dist/index-u.js dist/index.js",
-    "pipeline": "run-s build remove:checks uglify replace:uglifyed"
+    "copy:package": "cp package.json dist/package.json",
+    "copy:readme": "cp README.md dist/README.md",
+    "pipeline": "run-s build remove:checks uglify replace:uglifyed copy:package copy:readme"
   }
 }
