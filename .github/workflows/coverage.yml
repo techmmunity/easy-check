@@ -1,4 +1,4 @@
-name: tests
+name: coverage
 
 on:
   push:
@@ -21,3 +21,8 @@ jobs:
       - name: Run Tests
         run: |
           yarn test
+
+      - name: Colect Coverage
+        uses: coverallsapp/github-action@v1.1.2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
