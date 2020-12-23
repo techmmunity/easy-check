@@ -7,8 +7,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-lastest
-
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
@@ -20,24 +19,14 @@ jobs:
         run: |
           yarn test
 
-  prepares-for-publish:
-    runs-on: ubuntu-lastest
-
-    needs: test
-
-    steps:
       - name: Build
         run: |
-          tsc
+          yarn pipeline
 
       - name: Move package.json To Lib Folder
         run: |
           mv ${{ GITHUB_WORKSPACE }}/package.json ${{ GITHUB_WORKSPACE }}/lib/package.json
 
-  publish-to-npm:
-    runs-on: ubuntu-lastest
-
-    steps:
       - name: Publish To NPM
         uses: pascalgn/npm-publish-action@1.3.6
         with:
