@@ -19,10 +19,12 @@
     "regex",
     "validation"
   ],
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^26.0.5",
     "@typescript-eslint/eslint-plugin": "^3.7.0",
     "@typescript-eslint/parser": "^3.7.0",
+    "@vercel/ncc": "^0.26.1",
     "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",
@@ -33,13 +35,19 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^26.1.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "ts-jest": "^26.1.3",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "uglify-js": "^3.12.3"
   },
-  "dependencies": {},
   "scripts": {
-    "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "clean": "rm -rf lib && rm -rf dist",
+    "build": "ncc build src/index.ts -o dist",
+    "remove:checks": "rm -rf dist/checks",
+    "uglify": "uglifyjs dist/index.js -c -o dist/index-u.js",
+    "replace:uglifyed": "mv dist/index-u.js dist/index.js",
+    "pipeline": "run-s build remove:checks uglify replace:uglifyed"
   }
 }

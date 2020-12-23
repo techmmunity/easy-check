@@ -1,2 +1,8 @@
-const IS_REGEX = /^((?:(?:[^?+*{}()[\]\\|]+|\\.|\[(?:\^?\\.|\^[^\\]|[^\\^])(?:[^\]\\]+|\\.)*\]|\((?:\?[:=!]|\?<[=!]|\?>)?(?1)??\)|\(\?(?:R|[+-]?\d+)\))(?:(?:[?+*]|\{\d+(?:,\d*)?\})[?+]?)?|\|)*)$/;
-export const isRegex = (str: string) => IS_REGEX.test(str);
+export const isRegex = (str: string) => {
+  try {
+    new RegExp(str);
+    return true;
+  } catch {
+    return false;
+  }
+};
