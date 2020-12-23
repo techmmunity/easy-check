@@ -25,13 +25,13 @@ jobs:
 
       - name: Move package.json To Lib Folder
         run: |
-          mv ${{ GITHUB_WORKSPACE }}/package.json ${{ GITHUB_WORKSPACE }}/lib/package.json
+          mv ${{ github.workspace }}/package.json ${{ github.workspace }}/lib/package.json
 
       - name: Publish To NPM
         uses: pascalgn/npm-publish-action@1.3.6
         with:
           create_tag: false
-          workspace: ${{ GITHUB_WORKSPACE }}/lib
+          workspace: ${{ github.workspace }}/lib
           publish_command: yarn
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
