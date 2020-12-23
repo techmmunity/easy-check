@@ -37,7 +37,7 @@ describe("isHexColor (return True)", () => {
  */
 
 describe("isHexColor (return False)", () => {
-  it("whithout #", () => {
+  it("without #", () => {
     expect(isHexColor("fff")).toBe(false);
     expect(isHexColor("ffffff")).toBe(false);
     expect(isHexColor("000")).toBe(false);

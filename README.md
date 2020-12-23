@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/@techmmunity/easy-check.svg?color=CC3534)](https://www.npmjs.com/package/@techmmunity/easy-check) <space> [![Coverage Status](https://coveralls.io/repos/github/Techmmunity/easy-check/badge.svg?branch=master)](https://coveralls.io/github/Techmmunity/easy-check?branch=master) <space> [![Tests](https://github.com/Techmmunity/easy-check/workflows/tests/badge.svg)]() <space> [![Downloads](https://img.shields.io/npm/dw/@techmmunity/easy-check.svg)](https://www.npmjs.com/package/@techmmunity/easy-check)
 
-check is a light-weigth library to check things that a lot of projects needs to check, like **email**, **username**, **phone**, and many more validations.
+Techmmunity Easy Check is a library to check **ALL** the things that a lot of projects need to check, like **email**, **username**, **phone** and **many, many more** validations.
 
 ## Install
 
@@ -68,4 +68,6 @@ You can find more information about the methods in the comments of the methods d
 | `isIpv4WithMask`    | `check.isIpv4WithMask("192.168.1.1/24")`                       |
 | `isStrongPassword`  | `check.isStrongPassword("$t0ngP@ssw0rD")`                      |
 | `isBrazillianPhone` | `check.isBrazillianPhone("2199999999")`                        |
+| `isUrl`             | `check.isUrl("https://google.com")`                            |
+| `hasUrl`            | `check.hasUrl("foo bar https://google.com foo bar")`           |
 | `isSimpleUsername`  | `check.isSimpleUsername("user-name")`                          |

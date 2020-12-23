@@ -30,7 +30,7 @@ describe("hasEmojis (return True)", () => {
  */
 
 describe("hasEmojis (return False)", () => {
-  it("whithout emojis", () => {
+  it("without emojis", () => {
     const result = hasEmojis("foo bar");
     expect(result).toBe(false);
   });

@@ -40,12 +40,12 @@ describe("isEmail (return True)", () => {
  */
 
 describe("isEmail (return False)", () => {
-  it("whithout @", () => {
+  it("without @", () => {
     const result = isEmail("emailtest.com");
     expect(result).toBe(false);
   });
 
-  it("whithout @ ands with number", () => {
+  it("without @ ands with number", () => {
     const result = isEmail("emailtest123.com");
     expect(result).toBe(false);
   });
