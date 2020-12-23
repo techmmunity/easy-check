@@ -50,7 +50,7 @@ describe("hasHtmlTags (return True)", () => {
  */
 
 describe("hasHtmlTags (return False)", () => {
-  it("whithout tags", () => {
+  it("without tags", () => {
     const result = hasHtmlTags("foo bar");
     expect(result).toBe(false);
   });

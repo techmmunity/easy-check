@@ -21,25 +21,25 @@ describe("isStrongPassword (return True)", () => {
  */
 
 describe("isStrongPassword (return False)", () => {
-  it("whithout Uppercase", () => {
+  it("without Uppercase", () => {
     expect(isStrongPassword("foo#123")).toBe(false);
     expect(isStrongPassword("fo$#125")).toBe(false);
     expect(isStrongPassword("fo125%")).toBe(false);
   });
 
-  it("whithout Lowercase", () => {
+  it("without Lowercase", () => {
     expect(isStrongPassword("FOO#123")).toBe(false);
     expect(isStrongPassword("FO$#125")).toBe(false);
     expect(isStrongPassword("FO125%")).toBe(false);
   });
 
-  it("whithout Numbers", () => {
+  it("without Numbers", () => {
     expect(isStrongPassword("Foo#bar")).toBe(false);
     expect(isStrongPassword("Fo$#Bar")).toBe(false);
     expect(isStrongPassword("FooBar%")).toBe(false);
   });
 
-  it("whithout Special Characters", () => {
+  it("without Special Characters", () => {
     expect(isStrongPassword("Foobar6foo")).toBe(false);
     expect(isStrongPassword("Foo3Bar")).toBe(false);
     expect(isStrongPassword("Foo123Bar")).toBe(false);
