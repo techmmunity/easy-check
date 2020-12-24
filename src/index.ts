@@ -1,3 +1,12 @@
+import {
+  isDateDMY,
+  isDateDMYS,
+  isDateMDY,
+  isDateMDYS,
+  isDateYMD,
+  isDateYMDS,
+  isLeap,
+} from "checks/date";
 import { isEmail } from "checks/email";
 import { isEmoji, hasEmojis } from "checks/emoji";
 import { isHerokuApiKey } from "checks/heroku";
@@ -10,6 +19,40 @@ import { isUrl, hasUrl } from "checks/url";
 import { isSimpleUsername } from "checks/username";
 
 export const check = {
+  /**
+   * Check if a string is an valid date format
+   * - 31-01-2020
+   */
+  isDateDMY,
+  /**
+   * Check if a string is an valid date format
+   * - 31/01/2020
+   */
+  isDateDMYS,
+  /**
+   * Check if a string is an valid date format
+   * - 01-31-2020
+   */
+  isDateMDY,
+  /**
+   * Check if a string is an valid date format
+   * - 01/31/2020
+   */
+  isDateMDYS,
+  /**
+   * Check if a string is an valid date format
+   * - 2020-01-31
+   */
+  isDateYMD,
+  /**
+   * Check if a string is an valid date format
+   * - 2020/01/31
+   */
+  isDateYMDS,
+  /**
+   * Check if a string is an leap year
+   */
+  isLeap,
   /**
    * Check if a string is an email
    */

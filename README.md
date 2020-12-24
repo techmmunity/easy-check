@@ -58,6 +58,13 @@ You can find more information about the methods in the comments of the methods d
 
 | Method              | How To Use                                                     |
 | ------------------- | -------------------------------------------------------------- |
+| `isDateDMY`         | `check.isDateDMY("31-01-2020")`                                |
+| `isDateDMYS`        | `check.isDateDMYS("31/01/2020")`                               |
+| `isDateMDY`         | `check.isDateMDY("01-31-2020")`                                |
+| `isDateMDYS`        | `check.isDateMDYS("01/31/2020")`                               |
+| `isDateYMD`         | `check.isDateYMD("2020-01-31")`                                |
+| `isDateYMDS`        | `check.isDateYMDS("2020/01/31")`                               |
+| `isLeap`            | `check.isLeap("2020")`                                         |
 | `isEmail`           | `check.isEmail("example@email.com")`                           |
 | `isEmoji`           | `check.isEmoji("😂")`                                          |
 | `hasEmojis`         | `check.hasEmojis("Yes, there is emojis here 😂")`              |
