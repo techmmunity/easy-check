@@ -14,6 +14,14 @@ describe("makeFunction (return True)", () => {
     const result = func("foo");
     expect(result).toBe(true);
   });
+
+  it("with valid fuc", () => {
+    const func = makeFunction({
+      func: (str: string) => str === "foo",
+    });
+    const result = func("foo");
+    expect(result).toBe(true);
+  });
 });
 
 /**
@@ -24,11 +32,16 @@ describe("makeFunction (return True)", () => {
 
 describe("makeFunction (return False)", () => {
   it("with invalid params", () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    const func = makeFunction({});
-    const result = func("foo");
-    expect(result).toBe(false);
+    let message = "";
+
+    try {
+      const func = makeFunction({});
+      func("foo");
+    } catch (e) {
+      message = e.message;
+    }
+
+    expect(message).toBe("INVALID_VALIDATION");
   });
 
   it("with invalid string type", () => {
@@ -38,6 +51,16 @@ describe("makeFunction (return False)", () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const result = func(3);
+    expect(result).toBe(false);
+  });
+
+  it("with error happening in the function", () => {
+    const func = makeFunction({
+      func: () => {
+        throw new Error("foo");
+      },
+    });
+    const result = func("bar");
     expect(result).toBe(false);
   });
 });

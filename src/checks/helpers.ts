@@ -1,13 +1,20 @@
 interface IParams {
-  regex: RegExp;
+  regex?: RegExp;
+  func?: (str: string) => boolean;
 }
 
-export const makeFunction = ({ regex }: IParams) => (str: string) => {
+export const makeFunction = ({ regex, func }: IParams) => (str: string) => {
   try {
     if (typeof str !== "string") return false;
 
-    return regex.test(str);
+    if (regex) {
+      return regex.test(str);
+    } else if (func) {
+      return func(str);
+    }
   } catch (e) {
     return false;
   }
+
+  throw new Error("INVALID_VALIDATION");
 };
