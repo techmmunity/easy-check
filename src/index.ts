@@ -1,3 +1,4 @@
+import { isCPF, isMaskedCPF } from "checks/cpf";
 import {
   isDateDMY,
   isDateDMYS,
@@ -19,6 +20,16 @@ import { isUrl, hasUrl } from "checks/url";
 import { isSimpleUsername } from "checks/username";
 
 export const check = {
+  /**
+   * Check if a string is a valid cpf
+   * - 55357314047
+   */
+  isCPF,
+  /**
+   * Check if a string is a valid maksed cpf
+   * - 553.573.140-47
+   */
+  isMaskedCPF,
   /**
    * Check if a string is an valid date format
    * - 31-01-2020

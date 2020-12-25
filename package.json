@@ -1,6 +1,6 @@
 {
   "name": "@techmmunity/easy-check",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "main": "index.js",
   "types": "index.d.ts",
   "author": "Techmmunity",
@@ -47,6 +47,7 @@
     "remove:extras": "rm -rf dist/checks && rm -rf dist/tests",
     "copy:package": "cp package.json dist/package.json",
     "copy:readme": "cp README.md dist/README.md",
-    "pipeline": "run-s build remove:extras copy:package copy:readme"
+    "copy:license": "cp LICENSE dist/LICENSE",
+    "pipeline": "run-s build remove:extras copy:package copy:readme copy:license"
   }
 }
