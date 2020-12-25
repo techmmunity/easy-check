@@ -58,6 +58,8 @@ You can find more information about the methods in the comments of the methods d
 
 | Method              | How To Use                                                     |
 | ------------------- | -------------------------------------------------------------- |
+| `isCPF`             | `check.isCPF("55357314047")`                                   |
+| `isMaskedCPF`       | `check.isMaskedCPF("553.573.140-47")`                          |
 | `isDateDMY`         | `check.isDateDMY("31-01-2020")`                                |
 | `isDateDMYS`        | `check.isDateDMYS("31/01/2020")`                               |
 | `isDateMDY`         | `check.isDateMDY("01-31-2020")`                                |
