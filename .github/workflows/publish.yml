@@ -22,12 +22,17 @@ jobs:
         run: |
           yarn pipeline
 
-      - name: Cd Dist
+      - name: Publish to NPM
         run: |
-          cd dist
-
-      - name: Publish
-        run: |
-          npm publish --access public
+          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+          npm config set scope "<@OWNER>"
+          npm config list
+          npm publish dist --access public
         env:
+          CI: true
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
+      - name: Publish to GitHub Package Registry
+        run: npm publish dist
+        env:
+          NODE_AUTH_TOKEN: ${{ github.token }}
