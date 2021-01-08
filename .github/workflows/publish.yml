@@ -1,0 +1,29 @@
+name: Publish To NPM
+
+on:
+ 	release:
+ 		types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: |
+          yarn
+
+      - name: Run Tests
+        run: |
+          yarn test
+
+      - name: Build
+				run: |
+					yarn pipeline
+
+			- name: Publish
+				run: |
+					npm publish — access public
+				env:
+					NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
