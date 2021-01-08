@@ -18,6 +18,7 @@ import { isStrongPassword } from "checks/password";
 import { isBrazillianPhone } from "checks/phone";
 import { isUrl, hasUrl } from "checks/url";
 import { isSimpleUsername } from "checks/username";
+import { isUUID } from "checks/uuid";
 
 export const check = {
   /**
@@ -134,4 +135,8 @@ export const check = {
    * - NO Special Characters, only `-` and `_`
    */
   isSimpleUsername,
+  /**
+   * Check if a string is valid UUID (version 4)
+   */
+  isUUID,
 };
