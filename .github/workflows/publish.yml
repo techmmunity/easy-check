@@ -1,8 +1,8 @@
 name: Publish To NPM
 
 on:
- 	release:
- 		types: [published]
+  release:
+    types: [published]
 
 jobs:
   publish:
@@ -19,11 +19,11 @@ jobs:
           yarn test
 
       - name: Build
-				run: |
-					yarn pipeline
+        run: |
+          yarn pipeline
 
-			- name: Publish
-				run: |
-					npm publish — access public
-				env:
-					NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - name: Publish
+        run: |
+          npm publish — access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
