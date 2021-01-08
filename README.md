@@ -26,7 +26,7 @@ With TypeScript:
 import { check } from "@techmmunity/easy-check";
 
 if (check.isEmail("example@email.com")) {
-  console.log("Yes, it's an email!");
+	console.log("Yes, it's an email!");
 }
 ```
 
@@ -36,7 +36,7 @@ With JavaScript:
 const { check } = require("@techmmunity/easy-check");
 
 if (check.isEmail("example@email.com")) {
-  console.log("Yes, it's an email!");
+	console.log("Yes, it's an email!");
 }
 ```
 
@@ -80,3 +80,4 @@ You can find more information about the methods in the comments of the methods d
 | `isUrl`             | `check.isUrl("https://google.com")`                            |
 | `hasUrl`            | `check.hasUrl("foo bar https://google.com foo bar")`           |
 | `isSimpleUsername`  | `check.isSimpleUsername("user-name")`                          |
+| `isUUIDv4`          | `check.isUUIDv4("24bd85a1-4eb7-4f63-829e-75c08ac2b6c0")`       |

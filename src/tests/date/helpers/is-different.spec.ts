@@ -7,10 +7,10 @@ import { isDifferent } from "checks/date/helpers";
  */
 
 describe("different (return True)", () => {
-  it("with invalid values", () => {
-    const result = isDifferent(1, "1");
-    expect(result).toBe(true);
-  });
+	it("with invalid values", () => {
+		const result = isDifferent(1, "1");
+		expect(result).toBe(true);
+	});
 });
 
 /**
@@ -20,8 +20,8 @@ describe("different (return True)", () => {
  */
 
 describe("different (return False)", () => {
-  it("with valid values", () => {
-    const result = isDifferent(1, "01");
-    expect(result).toBe(false);
-  });
+	it("with valid values", () => {
+		const result = isDifferent(1, "01");
+		expect(result).toBe(false);
+	});
 });

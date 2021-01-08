@@ -9,3 +9,6 @@ dist/
 
 # Lint
 lib/
+
+# Logs
+*.log*
