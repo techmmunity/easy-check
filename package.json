@@ -1,5 +1,5 @@
 {
-	"name": "@techmmunity/easy-check",
+	"name": "easy-check",
 	"version": "2.4.0",
 	"main": "index.js",
 	"types": "index.d.ts",
@@ -19,6 +19,9 @@
 		"regex",
 		"validation"
 	],
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/@techmmunity"
+	},
 	"dependencies": {},
 	"devDependencies": {
 		"@types/jest": "^26.0.5",
