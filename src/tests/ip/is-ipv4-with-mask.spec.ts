@@ -1,4 +1,4 @@
-import { isIpv4WithMask } from "checks/ip";
+import { isIpv4WithMask } from "checks/ip/is-ipv4-with-mask";
 
 /**
  *

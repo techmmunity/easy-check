@@ -1,4 +1,4 @@
-import { isLeap } from "checks/date";
+import { isLeap } from "checks/date/is-leap";
 
 /**
  *

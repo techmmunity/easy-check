@@ -1,4 +1,4 @@
-import { isEmail } from "checks/email";
+import { isEmail } from "checks/email/is-email";
 
 /**
  *

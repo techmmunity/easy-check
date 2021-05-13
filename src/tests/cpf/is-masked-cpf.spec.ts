@@ -1,4 +1,4 @@
-import { isMaskedCPF } from "checks/cpf";
+import { isMaskedCPF } from "checks/cpf/is-masked-cpf";
 
 /**
  *

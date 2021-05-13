@@ -1,4 +1,4 @@
-import { isDifferent } from "checks/date/helpers";
+import { isDifferent } from "checks/date/helpers/is-date";
 
 /**
  *

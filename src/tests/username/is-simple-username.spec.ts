@@ -1,4 +1,4 @@
-import { isSimpleUsername } from "checks/username";
+import { isSimpleUsername } from "checks/username/is-simple-username";
 
 /**
  *

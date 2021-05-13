@@ -12,3 +12,7 @@ lib/
 
 # Logs
 *.log*
+
+# TypeScript
+tsconfig.*
+!tsconfig.json

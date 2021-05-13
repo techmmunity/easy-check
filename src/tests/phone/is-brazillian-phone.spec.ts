@@ -1,4 +1,4 @@
-import { isBrazillianPhone } from "checks/phone";
+import { isBrazillianPhone } from "checks/phone/is-brazzilian-phone";
 
 /**
  *

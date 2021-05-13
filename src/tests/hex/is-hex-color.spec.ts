@@ -1,4 +1,4 @@
-import { isHexColor } from "checks/hex";
+import { isHexColor } from "checks/hex/is-hex-color";
 
 /**
  *

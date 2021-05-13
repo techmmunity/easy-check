@@ -1,4 +1,4 @@
-import { isUUIDv4 } from "checks/uuid";
+import { isUUIDv4 } from "checks/uuid/is-uuid-v4";
 
 /**
  *

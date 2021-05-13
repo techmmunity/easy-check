@@ -1,4 +1,4 @@
-import { isInvalidDate } from "checks/date/helpers";
+import { isInvalidDate } from "checks/date/helpers/is-date";
 
 /**
  *

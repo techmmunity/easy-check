@@ -1,4 +1,4 @@
-import { isEven } from "checks/number";
+import { isEven } from "checks/number/is-even";
 
 /**
  *

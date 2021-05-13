@@ -1,4 +1,4 @@
-import { isHerokuApiKey } from "checks/heroku";
+import { isHerokuApiKey } from "checks/heroku/is-heroku-api-key";
 
 /**
  *

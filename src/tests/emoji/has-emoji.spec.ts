@@ -1,4 +1,4 @@
-import { hasEmojis } from "checks/emoji";
+import { hasEmojis } from "checks/emoji/has-emojis";
 
 /**
  *

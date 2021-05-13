@@ -1,4 +1,4 @@
-import { hasHtmlTags } from "checks/html";
+import { hasHtmlTags } from "checks/html/has-html-tags";
 
 /**
  *
