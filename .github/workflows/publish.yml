@@ -25,16 +25,16 @@ jobs:
       - name: Remove Extras
         run: |
           rm -rf dist/checks
-					rm -rf dist/tests
+          rm -rf dist/tests
 
       - name: Copy files
         run: |
           cp package.json dist/package.json
-					cp README.md dist/README.md
-					cp LICENSE dist/LICENSE
+          cp README.md dist/README.md
+          cp LICENSE dist/LICENSE
 
       - name: Setup Package Manager
-				uses: actions/setup-node@master
+        uses: actions/setup-node@master
         with:
           node-version: 14
           registry-url: "https://registry.npmjs.org/"
