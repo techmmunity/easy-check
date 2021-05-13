@@ -9,6 +9,8 @@
 
 Techmmunity Easy-Check is a library to check **ALL** the things that a lot of projects need to check, like **email**, **username**, **phone** and **many, many more** validations.
 
+[![Discord Badge](https://img.shields.io/badge/join%20our%20community-7289DA?style=for-the-badge&labelColor=7289DA&logo=discord&logoColor=white)](https://discord.gg/qCJXz6P4qw)
+
 ## Install
 
 With Yarn:
