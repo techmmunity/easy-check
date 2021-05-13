@@ -1,4 +1,4 @@
-import { isOdd } from "checks/number";
+import { isOdd } from "checks/number/is-odd";
 
 /**
  *

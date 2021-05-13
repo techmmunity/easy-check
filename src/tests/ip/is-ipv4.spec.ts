@@ -1,4 +1,4 @@
-import { isIpv4 } from "checks/ip";
+import { isIpv4 } from "checks/ip/is-ipv4";
 
 /**
  *

@@ -1,4 +1,4 @@
-import { outOfRange } from "checks/date/helpers";
+import { outOfRange } from "checks/date/helpers/is-date";
 
 /**
  *

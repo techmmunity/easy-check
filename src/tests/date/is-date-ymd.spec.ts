@@ -1,4 +1,4 @@
-import { isDateYMD } from "checks/date";
+import { isDateYMD } from "checks/date/is-date-ymd";
 
 /**
  *

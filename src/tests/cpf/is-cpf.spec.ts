@@ -1,4 +1,4 @@
-import { isCPF } from "checks/cpf";
+import { isCPF } from "checks/cpf/is-cpf";
 
 /**
  *

@@ -1,4 +1,4 @@
-import { isEmoji } from "checks/emoji";
+import { isEmoji } from "checks/emoji/is-emoji";
 
 /**
  *

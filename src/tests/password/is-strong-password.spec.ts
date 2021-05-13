@@ -1,4 +1,4 @@
-import { isStrongPassword } from "checks/password";
+import { isStrongPassword } from "checks/password/is-strong-password";
 
 /**
  *

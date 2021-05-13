@@ -1,4 +1,4 @@
-import { isDateDMY } from "checks/date";
+import { isDateDMY } from "checks/date/is-date-dmy";
 
 /**
  *

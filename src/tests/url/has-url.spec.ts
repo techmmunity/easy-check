@@ -1,4 +1,4 @@
-import { hasUrl } from "checks/url";
+import { hasUrl } from "checks/url/has-url";
 
 /**
  *
