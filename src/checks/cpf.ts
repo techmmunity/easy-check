@@ -1,7 +1,7 @@
 // CPF validation according to Receita Federal
 // More info: https://www.devmedia.com.br/validar-cpf-com-javascript/23916
 
-import { makeFunction } from "./helpers";
+import { makeFunction } from "../helpers/make-function";
 
 const notCpf = [
 	"00000000000",
@@ -25,7 +25,7 @@ const checkCPF = (cpf: string) => {
 	count = 10;
 	total = 0;
 	for (const number of temp) {
-		total += parseInt(number) * count;
+		total += parseInt(number, 10) * count;
 		count--;
 	}
 	total = (total * 10) % 11;
@@ -38,7 +38,7 @@ const checkCPF = (cpf: string) => {
 	count = 11;
 	total = 0;
 	for (const number of temp) {
-		total += parseInt(number) * count;
+		total += parseInt(number, 10) * count;
 		count--;
 	}
 	total = (total * 10) % 11;
@@ -58,10 +58,18 @@ const checkMaskedCPF = (maskedCPF: string) => {
 	return false;
 };
 
-export const isCPF = makeFunction({
+/**
+ * Check if a string is a valid cpf
+ * - 55357314047
+ */
+export const isCPF = makeFunction<string>({
 	func: checkCPF,
 });
 
-export const isMaskedCPF = makeFunction({
+/**
+ * Check if a string is a valid maksed cpf
+ * - 553.573.140-47
+ */
+export const isMaskedCPF = makeFunction<string>({
 	func: checkMaskedCPF,
 });
