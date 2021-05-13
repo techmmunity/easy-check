@@ -1,25 +1,39 @@
 {
 	"name": "@techmmunity/easy-check",
-	"version": "2.4.1",
+	"version": "3.0.0",
 	"main": "index.js",
 	"types": "index.d.ts",
+	"license": "Apache-2.0",
 	"author": "Techmmunity",
 	"description": "A Simple Library To Check Things With Regex",
-	"homepage": "https://github.com/Techmmunity/easy-check#readme",
-	"license": "MIT",
+	"homepage": "https://github.com/techmmunity/easy-check#readme",
 	"bugs": {
-		"url": "https://github.com/Techmmunity/easy-check/issues"
+		"url": "https://github.com/techmmunity/easy-check/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Techmmunity/easy-check.git"
+		"url": "git+https://github.com/techmmunity/easy-check.git"
 	},
 	"keywords": [
 		"check",
 		"regex",
-		"validation"
+		"validation",
+		"typescript",
+		"verify",
+		"validate",
+		"test",
+		"even",
+		"odd",
+		"cpf",
+		"leap",
+		"email",
+		"emoji",
+		"heroku",
+		"ipv4",
+		"password",
+		"url",
+		"uuid"
 	],
-	"dependencies": {},
 	"devDependencies": {
 		"@types/jest": "^26.0.5",
 		"@typescript-eslint/eslint-plugin": "^3.7.0",
@@ -42,12 +56,8 @@
 	},
 	"scripts": {
 		"test": "jest",
+		"test:cov": "jest --coverage",
 		"clean": "rm -rf lib && rm -rf dist && rm -rf coverage",
-		"build": "ncc build src/index.ts -o dist -m",
-		"remove:extras": "rm -rf dist/checks && rm -rf dist/tests",
-		"copy:package": "cp package.json dist/package.json",
-		"copy:readme": "cp README.md dist/README.md",
-		"copy:license": "cp LICENSE dist/LICENSE",
-		"pipeline": "run-s build remove:extras copy:package copy:readme copy:license"
+		"build": "ncc build src/index.ts -o dist -m"
 	}
 }

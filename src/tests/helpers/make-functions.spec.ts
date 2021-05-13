@@ -1,4 +1,4 @@
-import { makeFunction } from "checks/helpers";
+import { makeFunction } from "helpers/make-function";
 
 /**
  *
@@ -8,7 +8,7 @@ import { makeFunction } from "checks/helpers";
 
 describe("makeFunction (return True)", () => {
 	it("with valid regex", () => {
-		const func = makeFunction({
+		const func = makeFunction<string>({
 			regex: new RegExp(""),
 		});
 		const result = func("foo");
@@ -16,7 +16,7 @@ describe("makeFunction (return True)", () => {
 	});
 
 	it("with valid fuc", () => {
-		const func = makeFunction({
+		const func = makeFunction<string>({
 			func: (str: string) => str === "foo",
 		});
 		const result = func("foo");
@@ -32,35 +32,49 @@ describe("makeFunction (return True)", () => {
 
 describe("makeFunction (return False)", () => {
 	it("with invalid params", () => {
-		let message = "";
+		let result;
 
 		try {
-			const func = makeFunction({});
-			func("foo");
+			const func = makeFunction<string>({});
+			result = func("foo");
 		} catch (e) {
-			message = e.message;
+			result = e;
 		}
 
-		expect(message).toBe("INVALID_VALIDATION");
+		expect(result).toBe(false);
 	});
 
 	it("with invalid string type", () => {
-		const func = makeFunction({
-			regex: new RegExp(""),
-		});
-		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-		// @ts-ignore
-		const result = func(3);
+		let result;
+
+		try {
+			const func = makeFunction<string>({
+				regex: new RegExp(""),
+			});
+
+			result = func(3 as any);
+		} catch (e) {
+			result = e;
+		}
+
 		expect(result).toBe(false);
 	});
 
 	it("with error happening in the function", () => {
-		const func = makeFunction({
-			func: () => {
-				throw new Error("foo");
-			},
-		});
-		const result = func("bar");
+		let result;
+
+		try {
+			const func = makeFunction<string>({
+				func: () => {
+					throw new Error("foo");
+				},
+			});
+
+			result = func("bar");
+		} catch (e) {
+			result = e;
+		}
+
 		expect(result).toBe(false);
 	});
 });

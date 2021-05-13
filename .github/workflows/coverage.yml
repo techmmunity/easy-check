@@ -17,7 +17,7 @@ jobs:
 
       - name: Run Tests
         run: |
-          yarn test
+          yarn test:cov
 
       - name: Colect Coverage
         uses: coverallsapp/github-action@v1.1.2

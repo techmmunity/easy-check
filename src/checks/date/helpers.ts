@@ -46,7 +46,7 @@ export const isDate = (
 	if (monthBrute.length !== 2) return false;
 	if (outOfRange(yearBrute.length, 1, 4)) return false;
 
-	const dateFormatted = dateSplited.map((nbr) => parseInt(nbr));
+	const dateFormatted = dateSplited.map(nbr => parseInt(nbr, 10));
 
 	const day = dateFormatted[DAY_INDEX];
 	const month = dateFormatted[MONTH_INDEX];
