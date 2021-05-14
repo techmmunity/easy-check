@@ -89,10 +89,11 @@ All the details about contributing to the project are [described here](https://g
 
 ### Numbers
 
-| Method   | How To Use  |
-| -------- | ----------- |
-| `isEven` | `isEven(2)` |
-| `isOdd`  | `isOdd(1)`  |
+| Method             | How To Use             |
+| ------------------ | ---------------------- |
+| `isDivisibleByTen` | `isDivisibleByTen(10)` |
+| `isEven`           | `isEven(2)`            |
+| `isOdd`            | `isOdd(1)`             |
 
 ### Dates
 
@@ -320,6 +321,18 @@ if (isUUIDv4("24bd85a1-4eb7-4f63-829e-75c08ac2b6c0")) {
 ```
 
 ### Numbers
+
+#### isDivisibleByTen
+
+Check if a number is divisible by 10.
+
+```ts
+import { isDivisibleByTen } from "@techmmunity/easy-check";
+
+if (isDivisibleByTen(10)) {
+	// ...
+}
+```
 
 #### isEven
 
