@@ -435,6 +435,8 @@ if (isDateYMDS("2020/01/31")) {
 
 Check if the string or the number is leap year (year with February 29).
 
+**Bonus:** This validates if it's a valid year too!
+
 ```ts
 import { isLeap } from "@techmmunity/easy-check";
 
