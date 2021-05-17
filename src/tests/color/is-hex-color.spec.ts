@@ -1,4 +1,4 @@
-import { isHexColor } from "checks/hex/is-hex-color";
+import { isHexColor } from "checks/color/is-hex-color";
 
 /**
  *
@@ -61,7 +61,7 @@ describe("isHexColor (return False)", () => {
 	it("length < 3", () => {
 		expect(isHexColor("#7b")).toBe(false);
 		expect(isHexColor("#eb")).toBe(false);
-		expect(isHexColor("#55")).toBe(false);
-		expect(isHexColor("#9a")).toBe(false);
+		expect(isHexColor("#5")).toBe(false);
+		expect(isHexColor("#9")).toBe(false);
 	});
 });
