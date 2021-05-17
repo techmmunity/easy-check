@@ -5,7 +5,7 @@
 	"types": "index.d.ts",
 	"license": "Apache-2.0",
 	"author": "Techmmunity",
-	"description": "A Simple Library To Check Things With Regex",
+	"description": "An easy-to-use library to validate a big variety of things",
 	"homepage": "https://github.com/techmmunity/easy-check#readme",
 	"bugs": {
 		"url": "https://github.com/techmmunity/easy-check/issues"
