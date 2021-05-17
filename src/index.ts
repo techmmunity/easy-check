@@ -1,3 +1,7 @@
+export * from "./checks/color/is-dark-hex-color";
+export * from "./checks/color/is-hex-color";
+export * from "./checks/color/is-light-hex-color";
+
 export * from "./checks/cpf/is-cpf";
 export * from "./checks/cpf/is-masked-cpf";
 
@@ -15,8 +19,6 @@ export * from "./checks/emoji/has-emojis";
 export * from "./checks/emoji/is-emoji";
 
 export * from "./checks/heroku/is-heroku-api-key";
-
-export * from "./checks/hex/is-hex-color";
 
 export * from "./checks/html/has-html-tags";
 

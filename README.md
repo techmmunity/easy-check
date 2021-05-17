@@ -76,7 +76,6 @@ All the details about contributing to the project are [described here](https://g
 | `isEmoji`           | `isEmoji("😂")`                                          |
 | `hasEmojis`         | `hasEmojis("Yes, there is emojis here 😂")`              |
 | `isHerokuApiKey`    | `isHerokuApiKey("625628d3-8a45-466e-a55e-ead5c6886887")` |
-| `isHexColor`        | `isHexColor("#000")`                                     |
 | `hasHtmlTags`       | `hasHtmlTags("Foo <b>Bar</b>")`                          |
 | `isIpv4`            | `isIpv4("192.168.1.1")`                                  |
 | `isIpv4WithMask`    | `isIpv4WithMask("192.168.1.1/24")`                       |
@@ -86,6 +85,14 @@ All the details about contributing to the project are [described here](https://g
 | `hasUrl`            | `hasUrl("foo bar https://google.com foo bar")`           |
 | `isSimpleUsername`  | `isSimpleUsername("foo-bar")`                            |
 | `isUUIDv4`          | `isUUIDv4("24bd85a1-4eb7-4f63-829e-75c08ac2b6c0")`       |
+
+### Colors
+
+| Method            | How To Use                   |
+| ----------------- | ---------------------------- |
+| `isDarkHexColor`  | `isDarkHexColor("#000000")`  |
+| `isHexColor`      | `isHexColor("#000")`         |
+| `isLightHexColor` | `isLightHexColor("#ffffff")` |
 
 ### Numbers
 
@@ -181,18 +188,6 @@ Check if the string is in the heroku api key format.
 import { isHerokuApiKey } from "@techmmunity/easy-check";
 
 if (isHerokuApiKey("625628d3-8a45-466e-a55e-ead5c6886887")) {
-	// ...
-}
-```
-
-#### isHexColor
-
-Check if the string is a color in hex format.
-
-```ts
-import { isHexColor } from "@techmmunity/easy-check";
-
-if (isHexColor("#000") || isHexColor("#000000")) {
 	// ...
 }
 ```
@@ -316,6 +311,44 @@ Check if the string is a valid uuid v4.
 import { isUUIDv4 } from "@techmmunity/easy-check";
 
 if (isUUIDv4("24bd85a1-4eb7-4f63-829e-75c08ac2b6c0")) {
+	// ...
+}
+```
+
+### Colors
+
+#### isDarkHexColor
+
+Check if the string is a dark color in hex format.
+
+```ts
+import { isDarkHexColor } from "@techmmunity/easy-check";
+
+if (isDarkHexColor("#000") || isDarkHexColor("#000000")) {
+	// ...
+}
+```
+
+#### isHexColor
+
+Check if the string is a color in hex format.
+
+```ts
+import { isHexColor } from "@techmmunity/easy-check";
+
+if (isHexColor("#000") || isHexColor("#000000")) {
+	// ...
+}
+```
+
+#### isLightHexColor
+
+Check if the string is a light color in hex format.
+
+```ts
+import { isLightHexColor } from "@techmmunity/easy-check";
+
+if (isLightHexColor("#fff") || isLightHexColor("#ffffff")) {
 	// ...
 }
 ```
