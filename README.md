@@ -18,7 +18,7 @@ Our main goals with this lib:
 - **ZERO** dependencies (there's no blind spot, you can see exactly how it's being validated)
 - Extremely intuitive
 - Highly reliable
-- Highly predictable (each method returns `true` or `false`, there's no third path)
+- Highly predictable (each method returns `true` or `false`, there's no third option)
 
 [![Discord Badge](https://img.shields.io/badge/join%20our%20community-7289DA?style=for-the-badge&labelColor=7289DA&logo=discord&logoColor=white)](https://discord.gg/qCJXz6P4qw)
 
