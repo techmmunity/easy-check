@@ -9,7 +9,7 @@ module.exports = {
 	coverageDirectory: "../coverage",
 	testEnvironment: "node",
 	moduleDirectories: ["node_modules", "src"],
-	clearMocks: true,
+	resetMocks: true,
 	coverageThreshold: {
 		global: {
 			branches: 97.9,
