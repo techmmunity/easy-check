@@ -27,6 +27,7 @@ export * from "./checks/ip/is-ipv4-with-mask";
 
 export * from "./checks/number/is-divisible-by-ten";
 export * from "./checks/number/is-even";
+export * from "./checks/number/is-numeric";
 export * from "./checks/number/is-odd";
 
 export * from "./checks/password/is-strong-password";
