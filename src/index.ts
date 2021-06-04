@@ -25,6 +25,7 @@ export * from "./checks/html/has-html-tags";
 export * from "./checks/ip/is-ipv4";
 export * from "./checks/ip/is-ipv4-with-mask";
 
+export * from "./checks/number/is-divisible-by-ten";
 export * from "./checks/number/is-even";
 export * from "./checks/number/is-odd";
 
