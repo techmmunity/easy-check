@@ -73,8 +73,8 @@ All the details about contributing to the project are [described here](https://g
 | `isCPF`             | `isCPF("55357314047")`                                   |
 | `isMaskedCPF`       | `isMaskedCPF("553.573.140-47")`                          |
 | `isEmail`           | `isEmail("example@email.com")`                           |
-| `isEmoji`           | `isEmoji("😂")`                                          |
-| `hasEmojis`         | `hasEmojis("Yes, there is emojis here 😂")`              |
+| `isEmoji`           | `isEmoji("😂")`                                           |
+| `hasEmojis`         | `hasEmojis("Yes, there is emojis here 😂")`               |
 | `isHerokuApiKey`    | `isHerokuApiKey("625628d3-8a45-466e-a55e-ead5c6886887")` |
 | `hasHtmlTags`       | `hasHtmlTags("Foo <b>Bar</b>")`                          |
 | `isIpv4`            | `isIpv4("192.168.1.1")`                                  |
@@ -100,6 +100,7 @@ All the details about contributing to the project are [described here](https://g
 | ------------------ | ---------------------- |
 | `isDivisibleByTen` | `isDivisibleByTen(10)` |
 | `isEven`           | `isEven(2)`            |
+| `isNumeric`        | `isNUmeric("123")`     |
 | `isOdd`            | `isOdd(1)`             |
 
 ### Dates
@@ -379,12 +380,24 @@ if (isEven(2)) {
 }
 ```
 
-#### isEven
+#### isNumeric
+
+Check if a istring is made only by numbers
+
+```ts
+import { isNumeric } from "@techmmunity/easy-check";
+
+if (isNumeric("123")) {
+	// ...
+}
+```
+
+#### isOdd
 
 Check if a number is odd (NOT divisible by 2).
 
 ```ts
-import { isEven } from "@techmmunity/easy-check";
+import { isOdd } from "@techmmunity/easy-check";
 
 if (isOdd(3)) {
 	// ...
