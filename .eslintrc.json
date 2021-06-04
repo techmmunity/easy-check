@@ -1,55 +1,17 @@
 {
-	"env": {
-		"es6": true,
-		"node": true,
-		"jest": true
-	},
-	"extends": [
-		"standard",
-		"plugin:@typescript-eslint/recommended",
-		"plugin:prettier/recommended"
-	],
+	"root": true,
 	"parser": "@typescript-eslint/parser",
+	"plugins": ["import-helpers"],
+	"extends": [
+		"@techmmunity/eslint-config/common",
+		"@techmmunity/eslint-config/typescript",
+		"@techmmunity/eslint-config/jest"
+	],
 	"parserOptions": {
-		"ecmaVersion": 2018,
+		"project": "tsconfig.json",
 		"sourceType": "module"
 	},
-	"globals": {
-		"Atomics": "readonly",
-		"SharedArrayBuffer": "readonly"
-	},
-	"plugins": ["@typescript-eslint", "import-helpers", "prettier"],
 	"rules": {
-		"@typescript-eslint/explicit-function-return-type": 0,
-		"@typescript-eslint/explicit-module-boundary-types": "off",
-		"@typescript-eslint/no-explicit-any": 0,
-		"no-case-declarations": 0,
-		"accessor-pairs": ["warn", { "setWithoutGet": false }],
-		"@typescript-eslint/no-use-before-define": [
-			"error",
-			{ "functions": false }
-		],
-		"no-param-reassign": "error",
-		"no-new": "off",
-		"@typescript-eslint/interface-name-prefix": 0,
-		"no-prototype-builtins": "off",
-		"no-restricted-syntax": "off",
-		"max-classes-per-file": "off",
-		"@typescript-eslint/naming-convention": [
-			"error",
-			{
-				"selector": "interface",
-				"format": ["PascalCase"],
-				"custom": {
-					"regex": "^I[A-Z]",
-					"match": true
-				}
-			}
-		],
-		"no-underscore-dangle": "off",
-		"@typescript-eslint/camelcase": "off",
-		"prettier/prettier": "error",
-		"class-methods-use-this": "off",
 		"import-helpers/order-imports": [
 			"warn",
 			{

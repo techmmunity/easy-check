@@ -7,29 +7,24 @@ import { isCPF } from "checks/cpf/is-cpf";
  */
 
 describe("isCPF (return True)", () => {
-	it("with valid cpf", () => {
-		const result = isCPF("55357314047");
-		expect(result).toBe(true);
+	it("with valid cpf (1)", () => {
+		expect(isCPF("55357314047")).toBe(true);
 	});
 
-	it("with valid cpf", () => {
-		const result = isCPF("80158397002");
-		expect(result).toBe(true);
+	it("with valid cpf (2)", () => {
+		expect(isCPF("80158397002")).toBe(true);
 	});
 
-	it("with valid cpf", () => {
-		const result = isCPF("57609999075");
-		expect(result).toBe(true);
+	it("with valid cpf (3)", () => {
+		expect(isCPF("57609999075")).toBe(true);
 	});
 
-	it("with valid cpf", () => {
-		const result = isCPF("97497327070");
-		expect(result).toBe(true);
+	it("with valid cpf (4)", () => {
+		expect(isCPF("97497327070")).toBe(true);
 	});
 
-	it("with valid cpf", () => {
-		const result = isCPF("88541113094");
-		expect(result).toBe(true);
+	it("with valid cpf (5)", () => {
+		expect(isCPF("88541113094")).toBe(true);
 	});
 });
 
@@ -41,17 +36,14 @@ describe("isCPF (return True)", () => {
 
 describe("isCPF (return False)", () => {
 	it("with masked cpf", () => {
-		const result = isCPF("553.573.140-47");
-		expect(result).toBe(false);
+		expect(isCPF("553.573.140-47")).toBe(false);
 	});
 
-	it("with invalid cpf", () => {
-		const result = isCPF("00000000000");
-		expect(result).toBe(false);
+	it("with invalid cpf (1)", () => {
+		expect(isCPF("00000000000")).toBe(false);
 	});
 
-	it("with invalid cpf", () => {
-		const result = isCPF("88541113095");
-		expect(result).toBe(false);
+	it("with invalid cpf (2)", () => {
+		expect(isCPF("88541113095")).toBe(false);
 	});
 });

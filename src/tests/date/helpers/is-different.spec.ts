@@ -8,8 +8,7 @@ import { isDifferent } from "checks/date/helpers/is-date";
 
 describe("different (return True)", () => {
 	it("with invalid values", () => {
-		const result = isDifferent(1, "1");
-		expect(result).toBe(true);
+		expect(isDifferent(1, "1")).toBe(true);
 	});
 });
 
@@ -21,7 +20,6 @@ describe("different (return True)", () => {
 
 describe("different (return False)", () => {
 	it("with valid values", () => {
-		const result = isDifferent(1, "01");
-		expect(result).toBe(false);
+		expect(isDifferent(1, "01")).toBe(false);
 	});
 });

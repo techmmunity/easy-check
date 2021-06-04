@@ -1,7 +1,9 @@
 import { makeFunction } from "helpers/make-function";
 
-// CPF validation according to Receita Federal
-// More info: https://www.devmedia.com.br/validar-cpf-com-javascript/23916
+/*
+ * CPF validation according to Receita Federal
+ * More info: https://www.devmedia.com.br/validar-cpf-com-javascript/23916
+ */
 
 const notCpf = [
 	"00000000000",

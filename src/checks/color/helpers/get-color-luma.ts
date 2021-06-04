@@ -2,17 +2,12 @@ const getColorWithCorrectLength = (color: string) => {
 	if (color.length === 3) {
 		const colorSplitted = color.split("");
 
+		const [r, g, b] = colorSplitted;
+
 		/**
 		 * Duplicate the values, to make the code have length of six
 		 */
-		const colorWithLengthSix = [
-			colorSplitted[0],
-			colorSplitted[0],
-			colorSplitted[1],
-			colorSplitted[1],
-			colorSplitted[2],
-			colorSplitted[2],
-		];
+		const colorWithLengthSix = [r, r, g, g, b, b];
 
 		return colorWithLengthSix.join("");
 	}
@@ -31,7 +26,9 @@ export const getColorLuma = (color: string) => {
 	const g = (rgb >> 8) & 0xff;
 	const b = (rgb >> 0) & 0xff;
 
-	const luma = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+	const rLuma = 0.2126 * r;
+	const gLuma = 0.7152 * g;
+	const bLuma = 0.0722 * b;
 
-	return luma;
+	return rLuma + gLuma + bLuma;
 };
