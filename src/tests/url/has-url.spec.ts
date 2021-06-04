@@ -8,18 +8,15 @@ import { hasUrl } from "checks/url/has-url";
 
 describe("hasUrl (return True)", () => {
 	it("with link at the start", () => {
-		const result = hasUrl("https://google.com foo bar foo bar");
-		expect(result).toBe(true);
+		expect(hasUrl("https://google.com foo bar foo bar")).toBe(true);
 	});
 
 	it("with link at the end", () => {
-		const result = hasUrl("foo bar foo bar www.google.com");
-		expect(result).toBe(true);
+		expect(hasUrl("foo bar foo bar www.google.com")).toBe(true);
 	});
 
 	it("with link at the middle", () => {
-		const result = hasUrl("foo bar http://google.com.br foo bar");
-		expect(result).toBe(true);
+		expect(hasUrl("foo bar http://google.com.br foo bar")).toBe(true);
 	});
 });
 
@@ -31,17 +28,14 @@ describe("hasUrl (return True)", () => {
 
 describe("hasUrl (return False)", () => {
 	it("with invalid link at the start", () => {
-		const result = hasUrl("https://google foo bar foo bar");
-		expect(result).toBe(false);
+		expect(hasUrl("https://google foo bar foo bar")).toBe(false);
 	});
 
 	it("with invalid link at the end", () => {
-		const result = hasUrl("foo bar foo bar emailtest.com");
-		expect(result).toBe(false);
+		expect(hasUrl("foo bar foo bar emailtest.com")).toBe(false);
 	});
 
 	it("with invalid link at the middle", () => {
-		const result = hasUrl("foo bar http://localhost:9090 foo bar");
-		expect(result).toBe(false);
+		expect(hasUrl("foo bar http://localhost:9090 foo bar")).toBe(false);
 	});
 });

@@ -8,38 +8,31 @@ import { hasHtmlTags } from "checks/html/has-html-tags";
 
 describe("hasHtmlTags (return True)", () => {
 	it("with <a>", () => {
-		const result = hasHtmlTags('<a href="goog.com">foo</a>');
-		expect(result).toBe(true);
+		expect(hasHtmlTags('<a href="goog.com">foo</a>')).toBe(true);
 	});
 
 	it("with <div>", () => {
-		const result = hasHtmlTags("<div>foo</div>");
-		expect(result).toBe(true);
+		expect(hasHtmlTags("<div>foo</div>")).toBe(true);
 	});
 
 	it("with <i>", () => {
-		const result = hasHtmlTags("<i>foo</i>");
-		expect(result).toBe(true);
+		expect(hasHtmlTags("<i>foo</i>")).toBe(true);
 	});
 
 	it("with <button>", () => {
-		const result = hasHtmlTags("<button>foo</button>");
-		expect(result).toBe(true);
+		expect(hasHtmlTags("<button>foo</button>")).toBe(true);
 	});
 
 	it("with <link />", () => {
-		const result = hasHtmlTags('<link rel="stylesheet" />');
-		expect(result).toBe(true);
+		expect(hasHtmlTags('<link rel="stylesheet" />')).toBe(true);
 	});
 
 	it("with tag inside tag", () => {
-		const result = hasHtmlTags("<div> <button>Foo Bar</button>  </div>");
-		expect(result).toBe(true);
+		expect(hasHtmlTags("<div> <button>Foo Bar</button>  </div>")).toBe(true);
 	});
 
 	it("with tag in the middle of string", () => {
-		const result = hasHtmlTags("foo bar <b>Foo Bar</b> foo bar");
-		expect(result).toBe(true);
+		expect(hasHtmlTags("foo bar <b>Foo Bar</b> foo bar")).toBe(true);
 	});
 });
 
@@ -51,12 +44,10 @@ describe("hasHtmlTags (return True)", () => {
 
 describe("hasHtmlTags (return False)", () => {
 	it("without tags", () => {
-		const result = hasHtmlTags("foo bar");
-		expect(result).toBe(false);
+		expect(hasHtmlTags("foo bar")).toBe(false);
 	});
 
 	it("with empty tag", () => {
-		const result = hasHtmlTags("<>");
-		expect(result).toBe(false);
+		expect(hasHtmlTags("<>")).toBe(false);
 	});
 });

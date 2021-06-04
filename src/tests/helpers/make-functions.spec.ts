@@ -11,16 +11,16 @@ describe("makeFunction (return True)", () => {
 		const func = makeFunction<string>({
 			regex: new RegExp(""),
 		});
-		const result = func("foo");
-		expect(result).toBe(true);
+
+		expect(func("foo")).toBe(true);
 	});
 
 	it("with valid fuc", () => {
 		const func = makeFunction<string>({
 			func: (str: string) => str === "foo",
 		});
-		const result = func("foo");
-		expect(result).toBe(true);
+
+		expect(func("foo")).toBe(true);
 	});
 });
 

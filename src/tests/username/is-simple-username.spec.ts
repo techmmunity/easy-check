@@ -8,38 +8,31 @@ import { isSimpleUsername } from "checks/username/is-simple-username";
 
 describe("isSimpleUsername (return True)", () => {
 	it("with lower and upper case", () => {
-		const result = isSimpleUsername("Techmmunity");
-		expect(result).toBe(true);
+		expect(isSimpleUsername("Techmmunity")).toBe(true);
 	});
 
 	it("all upper case", () => {
-		const result = isSimpleUsername("TECHMMUNITY");
-		expect(result).toBe(true);
+		expect(isSimpleUsername("TECHMMUNITY")).toBe(true);
 	});
 
 	it("only letters", () => {
-		const result = isSimpleUsername("techmmunity");
-		expect(result).toBe(true);
+		expect(isSimpleUsername("techmmunity")).toBe(true);
 	});
 
 	it("letters and numbers in the end", () => {
-		const result = isSimpleUsername("techmmunity123");
-		expect(result).toBe(true);
+		expect(isSimpleUsername("techmmunity123")).toBe(true);
 	});
 
 	it("letters and numbers in the start", () => {
-		const result = isSimpleUsername("123techmmunity");
-		expect(result).toBe(true);
+		expect(isSimpleUsername("123techmmunity")).toBe(true);
 	});
 
 	it("with -", () => {
-		const result = isSimpleUsername("tech-mmunity");
-		expect(result).toBe(true);
+		expect(isSimpleUsername("tech-mmunity")).toBe(true);
 	});
 
 	it("with _", () => {
-		const result = isSimpleUsername("tech_mmunity");
-		expect(result).toBe(true);
+		expect(isSimpleUsername("tech_mmunity")).toBe(true);
 	});
 });
 
@@ -51,20 +44,30 @@ describe("isSimpleUsername (return True)", () => {
 
 describe("isSimpleUsername (return False)", () => {
 	it("bigger than allowed", () => {
-		const result = isSimpleUsername("techmmunitytechmu");
-		expect(result).toBe(false);
+		expect(isSimpleUsername("techmmunitytechmu")).toBe(false);
 	});
 
 	it("lower than allowed", () => {
-		const result = isSimpleUsername("te");
-		expect(result).toBe(false);
+		expect(isSimpleUsername("te")).toBe(false);
 	});
 
-	it("with special characters", () => {
+	it("with special characters (1)", () => {
 		expect(isSimpleUsername("techmmunity#")).toBe(false);
+	});
+
+	it("with special characters (2)", () => {
 		expect(isSimpleUsername("techmmunity$")).toBe(false);
+	});
+
+	it("with special characters (3)", () => {
 		expect(isSimpleUsername("techmmunity@")).toBe(false);
+	});
+
+	it("with special characters (4)", () => {
 		expect(isSimpleUsername("techmmunity/")).toBe(false);
+	});
+
+	it("with special characters (5)", () => {
 		expect(isSimpleUsername("techmmunity'")).toBe(false);
 	});
 });

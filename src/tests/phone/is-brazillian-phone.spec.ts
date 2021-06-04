@@ -22,22 +22,18 @@ describe("isBrazillianPhone (return True)", () => {
 
 describe("isBrazillianPhone (return False)", () => {
 	it("number with DDD 11 with only 8 numbers", () => {
-		const result = isBrazillianPhone("1199999999");
-		expect(result).toBe(false);
+		expect(isBrazillianPhone("1199999999")).toBe(false);
 	});
 
 	it("number with invalid DDD", () => {
-		const result = isBrazillianPhone("3099999999");
-		expect(result).toBe(false);
+		expect(isBrazillianPhone("3099999999")).toBe(false);
 	});
 
 	it("number bigger than allowed", () => {
-		const result = isBrazillianPhone("119999999999");
-		expect(result).toBe(false);
+		expect(isBrazillianPhone("119999999999")).toBe(false);
 	});
 
 	it("number lower than allowed", () => {
-		const result = isBrazillianPhone("119999999");
-		expect(result).toBe(false);
+		expect(isBrazillianPhone("119999999")).toBe(false);
 	});
 });

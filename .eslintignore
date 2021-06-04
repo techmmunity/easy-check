@@ -10,5 +10,9 @@ dist/
 # Lint
 lib/
 
-# Files
-*.js
+# Logs
+*.log*
+
+# TypeScript
+tsconfig.*
+!tsconfig.json

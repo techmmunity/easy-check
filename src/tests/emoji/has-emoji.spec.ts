@@ -8,18 +8,15 @@ import { hasEmojis } from "checks/emoji/has-emojis";
 
 describe("hasEmojis (return True)", () => {
 	it("with emoji in the start", () => {
-		const result = hasEmojis("😀 foo bar");
-		expect(result).toBe(true);
+		expect(hasEmojis("😀 foo bar")).toBe(true);
 	});
 
 	it("with emoji in the middle", () => {
-		const result = hasEmojis("foo 😀 bar");
-		expect(result).toBe(true);
+		expect(hasEmojis("foo 😀 bar")).toBe(true);
 	});
 
 	it("with emoji in the end", () => {
-		const result = hasEmojis("foo bar 😀");
-		expect(result).toBe(true);
+		expect(hasEmojis("foo bar 😀")).toBe(true);
 	});
 });
 
@@ -31,12 +28,10 @@ describe("hasEmojis (return True)", () => {
 
 describe("hasEmojis (return False)", () => {
 	it("without emojis", () => {
-		const result = hasEmojis("foo bar");
-		expect(result).toBe(false);
+		expect(hasEmojis("foo bar")).toBe(false);
 	});
 
 	it("with simbols", () => {
-		const result = hasEmojis("foo ✢ bar");
-		expect(result).toBe(false);
+		expect(hasEmojis("foo ✢ bar")).toBe(false);
 	});
 });

@@ -1,7 +1,10 @@
 // Index of Day - Month - Year
-const positionsDMY = {
+const datePositions = {
+	// eslint-disable-next-line @typescript-eslint/naming-convention
 	DMY: [0, 1, 2],
+	// eslint-disable-next-line @typescript-eslint/naming-convention
 	YMD: [2, 1, 0],
+	// eslint-disable-next-line @typescript-eslint/naming-convention
 	MDY: [1, 0, 2],
 };
 
@@ -25,18 +28,16 @@ export const isInvalidDate = (day: number, month: number, year: number) => {
 
 export const isDate = (
 	str: string,
-	format: keyof typeof positionsDMY,
+	format: keyof typeof datePositions,
 	separator: string,
 ) => {
 	const dateSplited = str.split(separator);
 
 	if (dateSplited.length !== 3) return false;
 
-	const position = positionsDMY[format];
+	const position = datePositions[format];
 
-	const DAY_INDEX = position[0];
-	const MONTH_INDEX = position[1];
-	const YEAR_INDEX = position[2];
+	const [DAY_INDEX, MONTH_INDEX, YEAR_INDEX] = position;
 
 	const dayBrute = dateSplited[DAY_INDEX];
 	const monthBrute = dateSplited[MONTH_INDEX];

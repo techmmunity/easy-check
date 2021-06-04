@@ -3136,52 +3136,54 @@ describe("isEmoji (return True)", () => {
 		 * False Negative
 		 *
 		 */
-		// expect(isEmoji("⭐️")).toBe(true);
-		// expect(isEmoji("⚡️")).toBe(true);
-		// expect(isEmoji("⛅️")).toBe(true);
-		// expect(isEmoji("⛄️")).toBe(true);
-		// expect(isEmoji("☔️")).toBe(true);
-		// expect(isEmoji("☕️")).toBe(true);
-		// expect(isEmoji("⚽️")).toBe(true);
-		// expect(isEmoji("⚾️")).toBe(true);
-		// expect(isEmoji("⛳️")).toBe(true);
-		// expect(isEmoji("⛵️")).toBe(true);
-		// expect(isEmoji("⚓️")).toBe(true);
-		// expect(isEmoji("⛽️")).toBe(true);
-		// expect(isEmoji("🧉")).toBe(true);
-		// expect(isEmoji("🍹")).toBe(true);
-		// expect(isEmoji("🍸")).toBe(true);
-		// expect(isEmoji("⛲️")).toBe(true);
-		// expect(isEmoji("⛺️")).toBe(true);
-		// expect(isEmoji("⛪️")).toBe(true);
-		// expect(isEmoji("⌚️")).toBe(true);
-		// expect(isEmoji("⌛️")).toBe(true);
-		// expect(isEmoji("♈️")).toBe(true);
-		// expect(isEmoji("♉️")).toBe(true);
-		// expect(isEmoji("♊️")).toBe(true);
-		// expect(isEmoji("♋️")).toBe(true);
-		// expect(isEmoji("♌️")).toBe(true);
-		// expect(isEmoji("♍️")).toBe(true);
-		// expect(isEmoji("♎️")).toBe(true);
-		// expect(isEmoji("♏️")).toBe(true);
-		// expect(isEmoji("♐️")).toBe(true);
-		// expect(isEmoji("♑️")).toBe(true);
-		// expect(isEmoji("♒️")).toBe(true);
-		// expect(isEmoji("♓️")).toBe(true);
-		// expect(isEmoji("🈚️")).toBe(true);
-		// expect(isEmoji("⭕️")).toBe(true);
-		// expect(isEmoji("⛔️")).toBe(true);
-		// expect(isEmoji("❗️")).toBe(true);
-		// expect(isEmoji("🈯️")).toBe(true);
-		// expect(isEmoji("♿️")).toBe(true);
-		// expect(isEmoji("⚧")).toBe(true);
-		// expect(isEmoji("⚫️")).toBe(true);
-		// expect(isEmoji("⚪️")).toBe(true);
-		// expect(isEmoji("◾️")).toBe(true);
-		// expect(isEmoji("◽️")).toBe(true);
-		// expect(isEmoji("⬛️")).toBe(true);
-		// expect(isEmoji("⬜️")).toBe(true);
-		// expect(isEmoji("🀄️")).toBe(true);
+		/*
+		 * Expect(isEmoji("⭐️")).toBe(true);
+		 * expect(isEmoji("⚡️")).toBe(true);
+		 * expect(isEmoji("⛅️")).toBe(true);
+		 * expect(isEmoji("⛄️")).toBe(true);
+		 * expect(isEmoji("☔️")).toBe(true);
+		 * expect(isEmoji("☕️")).toBe(true);
+		 * expect(isEmoji("⚽️")).toBe(true);
+		 * expect(isEmoji("⚾️")).toBe(true);
+		 * expect(isEmoji("⛳️")).toBe(true);
+		 * expect(isEmoji("⛵️")).toBe(true);
+		 * expect(isEmoji("⚓️")).toBe(true);
+		 * expect(isEmoji("⛽️")).toBe(true);
+		 * expect(isEmoji("🧉")).toBe(true);
+		 * expect(isEmoji("🍹")).toBe(true);
+		 * expect(isEmoji("🍸")).toBe(true);
+		 * expect(isEmoji("⛲️")).toBe(true);
+		 * expect(isEmoji("⛺️")).toBe(true);
+		 * expect(isEmoji("⛪️")).toBe(true);
+		 * expect(isEmoji("⌚️")).toBe(true);
+		 * expect(isEmoji("⌛️")).toBe(true);
+		 * expect(isEmoji("♈️")).toBe(true);
+		 * expect(isEmoji("♉️")).toBe(true);
+		 * expect(isEmoji("♊️")).toBe(true);
+		 * expect(isEmoji("♋️")).toBe(true);
+		 * expect(isEmoji("♌️")).toBe(true);
+		 * expect(isEmoji("♍️")).toBe(true);
+		 * expect(isEmoji("♎️")).toBe(true);
+		 * expect(isEmoji("♏️")).toBe(true);
+		 * expect(isEmoji("♐️")).toBe(true);
+		 * expect(isEmoji("♑️")).toBe(true);
+		 * expect(isEmoji("♒️")).toBe(true);
+		 * expect(isEmoji("♓️")).toBe(true);
+		 * expect(isEmoji("🈚️")).toBe(true);
+		 * expect(isEmoji("⭕️")).toBe(true);
+		 * expect(isEmoji("⛔️")).toBe(true);
+		 * expect(isEmoji("❗️")).toBe(true);
+		 * expect(isEmoji("🈯️")).toBe(true);
+		 * expect(isEmoji("♿️")).toBe(true);
+		 * expect(isEmoji("⚧")).toBe(true);
+		 * expect(isEmoji("⚫️")).toBe(true);
+		 * expect(isEmoji("⚪️")).toBe(true);
+		 * expect(isEmoji("◾️")).toBe(true);
+		 * expect(isEmoji("◽️")).toBe(true);
+		 * expect(isEmoji("⬛️")).toBe(true);
+		 * expect(isEmoji("⬜️")).toBe(true);
+		 * expect(isEmoji("🀄️")).toBe(true);
+		 */
 	});
 });
 
@@ -3264,36 +3266,30 @@ describe("isEmoji (return False)", () => {
 		 * False Positive
 		 *
 		 */
-		// expect(isEmoji("♟")).toBe(false);
+		// Expect(isEmoji("♟")).toBe(false);
 	});
 
 	it("whith two emojis", () => {
-		const result = isEmoji("🕧🕧");
-		expect(result).toBe(false);
+		expect(isEmoji("🕧🕧")).toBe(false);
 	});
 
 	it("with emoji and space", () => {
-		const result = isEmoji("🕧 ");
-		expect(result).toBe(false);
+		expect(isEmoji("🕧 ")).toBe(false);
 	});
 
 	it("with emoji and text", () => {
-		const result = isEmoji("foo🕧");
-		expect(result).toBe(false);
+		expect(isEmoji("foo🕧")).toBe(false);
 	});
 
 	it("with special characters", () => {
-		const result = isEmoji("$");
-		expect(result).toBe(false);
+		expect(isEmoji("$")).toBe(false);
 	});
 
 	it("with numbers", () => {
-		const result = isEmoji("1");
-		expect(result).toBe(false);
+		expect(isEmoji("1")).toBe(false);
 	});
 
 	it("with letters", () => {
-		const result = isEmoji("a");
-		expect(result).toBe(false);
+		expect(isEmoji("a")).toBe(false);
 	});
 });

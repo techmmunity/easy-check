@@ -7,13 +7,11 @@ import { isDateMDY } from "checks/date/is-date-mdy";
  */
 
 describe("isDateMDY (return True)", () => {
-	it("with valid date", () => {
-		const result = isDateMDY("01-01-2020");
-		expect(result).toBe(true);
+	it("with valid date (1)", () => {
+		expect(isDateMDY("01-01-2020")).toBe(true);
 	});
 
-	it("with valid date", () => {
-		const result = isDateMDY("12-31-2020");
-		expect(result).toBe(true);
+	it("with valid date (2)", () => {
+		expect(isDateMDY("12-31-2020")).toBe(true);
 	});
 });
