@@ -530,9 +530,9 @@
     "@sinonjs/commons" "^1.7.0"
 
 "@techmmunity/eslint-config@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@techmmunity/eslint-config/-/eslint-config-2.0.0.tgz#3678ba6b232a08b22ee15098b25fc326451d8f9e"
-  integrity sha512-Ic/MYyITKOxTwSm1AdhS++BnibvyH8h7ifhmN8f9fds30lvXEWD7eSLq9tbY+kvKdDrbfx0rDzu0Ta9IPHm0tw==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@techmmunity/eslint-config/-/eslint-config-2.1.0.tgz#6ae15b8e978960eb4893e7721dba25fde5231d7e"
+  integrity sha512-lebq/7fDop8tmQHqxn80VKwzFX1typUTuIvjPLO9rXU6g4GMG9y3wxsj6Vf6/s1UCS9rCm2/0MCI4BFuiVNu8w==
   dependencies:
     "@typescript-eslint/parser" "^4.25.0"
     eslint-config-prettier "^8.3.0"
