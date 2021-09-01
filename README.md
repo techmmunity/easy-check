@@ -20,7 +20,7 @@ Our main goals with this lib:
 - Highly reliable
 - Highly predictable (each method returns `true` or `false`, there's no third option)
 
-[![Discord Badge](https://img.shields.io/badge/join%20our%20community-7289DA?style=for-the-badge&labelColor=7289DA&logo=discord&logoColor=white)](https://discord.gg/qCJXz6P4qw)
+[![Guilded Badge](https://img.shields.io/badge/join%20our%20community-F5C400?style=for-the-badge&labelColor=F5C400&logo=guilded&logoColor=white)](https://guilded.gg/techmmunity)
 
 ## Install
 
