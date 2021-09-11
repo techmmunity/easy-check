@@ -1,3 +1,7 @@
+<div align="center">
+
+<img src="https://github.com/techmmunity/eslint-config/raw/master/resources/logo.gif" width="300" height="300">
+
 # Techmmunity Easy Check
 
 [![CodeFactor](https://www.codefactor.io/repository/github/techmmunity/easy-check/badge)](https://www.codefactor.io/repository/github/techmmunity/easy-check)
@@ -6,6 +10,8 @@
 [![tests](https://github.com/Techmmunity/easy-check/workflows/coverage/badge.svg)]()
 [![npm](https://img.shields.io/npm/v/@techmmunity/easy-check.svg?color=CC3534)](https://www.npmjs.com/package/@techmmunity/easy-check)
 [![Downloads](https://img.shields.io/npm/dw/@techmmunity/easy-check.svg)](https://www.npmjs.com/package/@techmmunity/easy-check)
+
+</div>
 
 All projects that involve programming work with data at some level, and the most worrying thing about that data is its reliability.
 
